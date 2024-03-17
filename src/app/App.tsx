@@ -3,9 +3,7 @@ import { useSelector } from 'react-redux';
 import { fetchUsers, usersSelectors } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks';
 import { Spinner } from '@/shared/ui';
-import { Search, UserCardList } from '@/widgets';
-import { NotFound } from '@/widgets/NotFound/NotFound.tsx';
-import { ModalUserWidget } from '@/widgets/ModalUserWidget/ModalUserWidget.tsx';
+import { Search, UserCardList, NotFound, ModalUserWidget } from '@/widgets';
 
 function App() {
     const users = useSelector(usersSelectors.users);
