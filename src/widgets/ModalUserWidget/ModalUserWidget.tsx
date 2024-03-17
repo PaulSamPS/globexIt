@@ -13,7 +13,11 @@ export const ModalUserWidget = () => {
     };
 
     return (
-        <ModalUser isOpen={isOpen} onClose={onClose} spinner={<Spinner position='relative' color='var(--plumbum)' />}>
+        <ModalUser
+            isOpen={isOpen}
+            onClose={onClose}
+            spinner={<Spinner position='relative' transparent />}
+        >
             {user && (
                 <ModalUserCard
                     name={user.name}
