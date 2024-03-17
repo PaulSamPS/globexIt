@@ -1,1 +1,1 @@
-export * from './ui/Overlay.tsx';
+export * from './Overlay.tsx';

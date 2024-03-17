@@ -1,1 +1,1 @@
-export * from './ui/CloseButton.tsx';
+export * from './CloseButton.tsx';

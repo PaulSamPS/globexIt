@@ -1,3 +1,3 @@
-export interface ModalOverlayProps {
+export interface OverlayProps {
     onClose: () => void;
 }

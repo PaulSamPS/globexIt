@@ -1,3 +1,6 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ReactNode } from 'react';
 
-export interface ModalContentType extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+export interface ContentProps {
+    width?: number
+    children: ReactNode;
+}

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { userActions, modalUserActions, IUser, UserCard } from '@/entities/User';
 import { useAppDispatch } from '@/shared/hooks';
 import { UserCardListProps } from '../model/types';
@@ -18,9 +19,16 @@ export const UserCardList = ({ users }: UserCardListProps) => {
     return (
         <div className={styles.list}>
             {users.map((user) => (
-                <div key={user.phone} onClick={() => handleClick(user)}>
+                <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true, margin: '10px' }}
+                    key={user.phone}
+                    onClick={() => handleClick(user)}
+                >
                     <UserCard name={user.name} phone={user.phone} email={user.email} />
-                </div>
+                </motion.div>
+
             ))}
         </div>
     );

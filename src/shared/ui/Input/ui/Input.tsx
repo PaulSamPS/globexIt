@@ -1,11 +1,13 @@
-import { InputHTMLAttributes } from 'react';
+import clsx from 'clsx';
 import styles from './Input.module.scss';
+import { InputProps } from '../model/types';
 
-export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'value'> {
-    onChange: (value: string) => void;
-    value: string;
-}
-
-export const Input = ({ onChange, value, className, ...props }: InputProps) => (
-    <input className={styles.input} type='text' value={value} onChange={(e) => onChange(e.target.value)} {...props} />
+export const Input = ({ onChange, value, type, className, ...props }: InputProps) => (
+    <input
+        className={clsx(styles.input, className)}
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        {...props}
+    />
 );

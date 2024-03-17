@@ -1,4 +1,3 @@
-export interface ModalCloseButtonProps {
+export interface CloseButtonProps {
     onClose: () => void;
-    position: 'relative' | 'absolute';
 }

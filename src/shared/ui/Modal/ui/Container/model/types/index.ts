@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-export interface ModalContainerProps {
+export interface ContainerProps {
     children: ReactNode;
-    isOpen: boolean;
+    isOpen: boolean | undefined;
     onClose: () => void;
 }
 
-export interface useModalProps extends Omit<ModalContainerProps, 'children'> {}
+export interface useModalProps extends Omit<ContainerProps, 'children'> {}

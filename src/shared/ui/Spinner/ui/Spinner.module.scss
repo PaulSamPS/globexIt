@@ -4,7 +4,6 @@
 	justify-content: center;
 	box-sizing: border-box;
 	width: 100%;
-	height: 100%;
 	padding: 20px;
 	color: var(--bg-main-color);
 
@@ -40,5 +39,14 @@
 
 .relative {
 	position: relative;
+}
+
+.stretched {
+	height: var(--height-100vh);
+}
+
+.transparent {
+	background-color: transparent;
+	color: var(--plumbum);
 }
 

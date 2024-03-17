@@ -7,18 +7,25 @@ interface ReqProps {
     query: string;
 }
 
+const cache: Map<string, IUser[]> = new Map();
 export const searchByName = createAsyncThunk<IUser[], ReqProps, ThunkConfig<string>>(
     'users/searchByName',
     async ({ query }, thunkAPI) => {
         const { extra, rejectWithValue } = thunkAPI;
         try {
-            const response = await extra.api.get<IUser[]>(`?term=${query}`);
+            if ((!cache.has(query))) {
+                const response = await extra.api.get<IUser[]>(`?term=${query}`);
 
-            if (!response.data) {
-                throw new Error();
+                if (!response.data) {
+                    throw new Error();
+                }
+
+                cache.set(query, response.data);
+
+                return response.data;
             }
 
-            return response.data;
+            return Array.from(cache.get(query)!);
         } catch (e: any) {
             const err: AxiosError<{ message: string }> = e;
             return rejectWithValue(err.response ? err.response.data.message : 'error');

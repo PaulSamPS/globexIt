@@ -6,6 +6,7 @@
   --bg-main-color: #FFF;
   --modal-overlay: rgb(188 195 208 / 50%);
   --shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+  --height-100vh: calc(100vh - 208px);
 
   font-synthesis: none;
   text-rendering: optimizelegibility;
@@ -15,15 +16,15 @@
 
 body {
   font-family: "Proxima Nova", sans-serif;
+  margin: 0;
+  overflow-y: scroll;
 }
 
 .app {
   max-width: 1121px;
   margin: 0 auto;
-}
-
-.search {
-  margin-top: 64px;
+  min-height: 100vh;
+  padding: 64px 0;
 }
 
 * {
@@ -31,11 +32,11 @@ body {
 }
 
 @font-face {
-    font-weight: 700;
+  font-weight: 700;
   font-family: "Proxima Nova Bold";
-    font-style: normal;
-    src: url("../fonts/proximanova_bold.otf") format("otf");
-    font-display: swap;
+  font-style: normal;
+  src: url("../fonts/proximanova_bold.otf") format("otf");
+  font-display: swap;
 }
 
 @font-face {
