@@ -1,0 +1,25 @@
+.wrapper {
+  cursor: pointer;
+  transition: ease-in-out .2s;
+
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+.name {
+  margin-bottom: 24px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 14px;
+  }
+
+  &:last-child {
+    margin-top: 12px;
+  }
+}

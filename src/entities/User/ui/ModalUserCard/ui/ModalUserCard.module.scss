@@ -1,0 +1,25 @@
+.name {
+  margin-bottom: 40px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 137px 1fr;
+  margin-bottom: 14px;
+  column-gap: 40px;
+}
+
+.label {
+  color: var(--plumbum);
+}
+
+.value {
+  color: var(--asphalt);
+}
+
+.more-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  row-gap: 12px;
+}

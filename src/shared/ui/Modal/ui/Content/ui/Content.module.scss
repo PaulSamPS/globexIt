@@ -1,0 +1,22 @@
+.content {
+  position: relative;
+  padding: 29px 24px;
+  color: var(--plumbum);
+  font-weight: 400;
+  background: var(--bg-main-color);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  animation: open-content ease-in-out .5s;
+}
+
+@keyframes open-content {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

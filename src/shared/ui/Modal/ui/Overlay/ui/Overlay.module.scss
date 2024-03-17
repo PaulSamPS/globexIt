@@ -1,0 +1,20 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--modal-overlay);
+  cursor: pointer;
+  animation: open-overlay ease-in-out .4s;
+}
+
+@keyframes open-overlay {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

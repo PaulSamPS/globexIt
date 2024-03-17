@@ -1,0 +1,21 @@
+.input {
+  width: 100%;
+  padding: 14px 24px;
+  color: var(--plumbum);
+  font-size: 16px;
+  border: 1px solid var(--blueberry);
+  border-radius: 24px;
+  outline: none;
+  cursor: default;
+
+  &::placeholder {
+    color: var(--color-secondary);
+    font-size: 14px;
+  }
+
+  &:focus:not([readonly]) {
+    border: 1px solid var(--purple-fog);
+    cursor: auto;
+  }
+}
+

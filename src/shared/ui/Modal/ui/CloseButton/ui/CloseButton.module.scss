@@ -1,0 +1,28 @@
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  .icon {
+    transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transition-duration: 500ms;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 29px;
+  right: 24px;
+}

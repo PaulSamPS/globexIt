@@ -1,0 +1,47 @@
+:root {
+  --purple-fog: #432EAB;
+  --asphalt: #8189A3;
+  --plumbum: #262C40;
+  --blueberry: #D4DEFE;
+  --bg-main-color: #FFF;
+  --modal-overlay: rgb(188 195 208 / 50%);
+  --shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.app {
+  max-width: 1121px;
+  margin: 0 auto;
+}
+
+.search {
+  margin-top: 64px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-weight: 700;
+  font-family: "Proxima Nova Bold";
+    font-style: normal;
+    src: url("../fonts/proximanova_bold.otf") format("otf");
+    font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Proxima Nova Regular";
+  font-style: normal;
+  src: url("../fonts/proximanova_regular.ttf") format("ttf");
+  font-display: swap;
+}
